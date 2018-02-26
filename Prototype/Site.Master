@@ -1,0 +1,41 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Prototype.Site" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat = "server">
+<title>
+    <asp:ContentPlaceHolder ID ="TitleName" runat="server">
+    </asp:ContentPlaceHolder>
+</title>
+<link href="~/CSS/Styles.css" rel="stylesheet" type="text/css" runat="server">
+</head >
+
+<body runat ="server">
+
+    <div class="header">
+        <img src="~/Images/Hot_Wheels_logo.png" id="Logo" alt="Logo" runat="server"/>
+        <a href="#" title="Login">Login</a> || <a href="#" title="Sign Up">Sign Up</a>
+    </div>
+
+    <div class="navigation">
+        <ul>
+			<li><a href = "Default.aspx" title = "Home">Home</a></li>
+			<li><a href = "Product.aspx" title = "Product">Products</a></li>
+			<li><a href = "#" title = "Contact Us">Contact Us</a></li>
+		</ul>
+    </div>
+
+    <div class="container">
+        <div class="content">
+            <h1>
+                <asp:ContentPlaceHolder ID ="PageTitle" runat="server">
+                </asp:ContentPlaceHolder>
+            </h1>
+        
+            <asp:ContentPlaceHolder ID ="ContentPlaceHolder" runat="server">
+            </asp:ContentPlaceHolder>
+            </div>
+    </div>
+</body>
+</html>
