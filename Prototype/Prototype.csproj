@@ -185,6 +185,7 @@
     <Content Include="admin\Web.config">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="member\CompletePurchase.aspx" />
     <Content Include="member\Contact.aspx" />
     <Content Include="member\Default.aspx" />
     <Content Include="member\Images\noimage.jpg" />
@@ -306,6 +307,13 @@
     </Compile>
     <Compile Include="login.aspx.designer.cs">
       <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="member\CompletePurchase.aspx.cs">
+      <DependentUpon>CompletePurchase.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="member\CompletePurchase.aspx.designer.cs">
+      <DependentUpon>CompletePurchase.aspx</DependentUpon>
     </Compile>
     <Compile Include="member\Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>

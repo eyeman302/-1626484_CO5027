@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="CompletePurchase.aspx.cs" Inherits="Prototype.CompletePurchase" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/member/Member.Master" AutoEventWireup="true" CodeBehind="CompletePurchase.aspx.cs" Inherits="Prototype.member.CompletePurchase" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleName" runat="server">
     Purchase Completed::HotWheels
 </asp:Content>
@@ -9,4 +9,3 @@
     <asp:Button ID="btnConfirm" runat="server" Text="Confirm" OnClick="btnConfirm_Click" />
     <asp:Literal ID="litInfo" runat="server"></asp:Literal>
 </asp:Content>
-

@@ -6,7 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using PayPal.Api;
 
-namespace Prototype
+namespace Prototype.member
 {
     public partial class CompletePurchase : System.Web.UI.Page
     {
