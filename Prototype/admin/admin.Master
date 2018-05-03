@@ -1,42 +1,32 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Prototype.Site" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="admin.master.cs" Inherits="Prototype.admin.admin" %>
+
 
 <!DOCTYPE html lang="en">
 
 <html>
-<head runat = "server">
+<head runat="server">
+
 <title>
     <asp:ContentPlaceHolder ID ="TitleName" runat="server">
     </asp:ContentPlaceHolder>
 </title>
-<link href="~/CSS/Styles.css" rel="stylesheet" type="text/css" runat="server"/>
+    <link href="~/CSS/Styles.css" rel="stylesheet" type="text/css" runat="server"/>
     <meta name ="viewport" content="initial-scale-1.0" />
     <meta charset="utf-8" />
-    <style>
-        #map {
-            height: 300px;
-            width: 80%;
-            margin-left: 10%;
-            margin-top: 20px;
-        }
-        html,body {
-            height:100%;
-            margin:0;
-            padding:0;
-        }
-    </style>
 </head >
 
 <body runat ="server">
 
+    <form id="form1" runat="server">
+
     <div class="header">
-        <img src="~/Images/Hot_Wheels_logo.png" id="Logo" alt="Logo" runat="server"/>
-        <a href="login.aspx" title="Login">Login</a> || <a href="Register.aspx" title="Sign Up">Sign Up</a>
+        <img src="~/Images/Hot_Wheels_logo.png" id="Logo" alt="Logo" runat="server"/>&nbsp;
+        <asp:Button ID="btnLogout" runat="server" OnClick="btnLogout_Click" Text="LOGOUT" />
     </div>
 
     <div class="navigation">
         <ul>
 			<li><a href = "Default.aspx" title = "Home">Home</a></li>
-			<li><a href = "Contact.aspx" title = "Contact Us">Contact Us</a></li>
 		</ul>
     </div>
 
@@ -51,14 +41,11 @@
             </asp:ContentPlaceHolder>
             </div>
     </div>
-
-    <asp:ContentPlaceHolder ID="GoogleMap" runat="server">
-    </asp:ContentPlaceHolder>
-
-    <footer id="footer">
+    <footer id ="footer">
         <a href="http://validator.w3.org/check?uri=referer">Validate HTML</a>
         <a href="http://jigsaw.w3.org/css-validator/check/referer">Validate CSS</a>
-        <a href="/CO5027_1626484_asg/admin/Default.aspx">Admin</a>
+        <a href="admin/Default.aspx">Admin</a>
     </footer>
+    </form>
 </body>
 </html>

@@ -6,139 +6,29 @@
     Home
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder" runat="server">
-    <div class="ItemGallery">
+    <form id="form1" runat="server">
+        <div class="ItemGallery">
 
-    <ul>
-        <li>
-            <div class="Items">
-                <div class="ItemImage">
-                    <a target="_blank" href="#">
-                    <img src="~/Images/Hot_Wheels_logo.png" alt="hotwheels" runat="server"/>
-                </a>
-                </div>
-                <div class="ItemDesc">
-                    <a href = "#">Hotwheels1</a>
-                </div>
-            </div>
-        </li>
+            <asp:Repeater ID="rptrProdutList" runat="server" DataSourceID="SqlDataSource1" OnItemCommand="rptrProdutList_ItemCommand">
 
-        <li>
-            <div class="Items">
-                <div class="ItemImage">
-                    <a target="_blank" href="#">
-                    <img src="~/Images/Hot_Wheels_logo.png" alt="hotwheels" runat="server"/>
-                </a>
-                </div>
-                <div class="ItemDesc">
-                    <a href = "#">Hotwheels2</a>
-                </div>
-            </div>
-        </li>
-
-        <li>
-            <div class="Items">
-                <div class="ItemImage">
-                    <a target="_blank" href="#">
-                    <img src="~/Images/Hot_Wheels_logo.png" alt="hotwheels" runat="server"/>
-                </a>
-                </div>
-                <div class="ItemDesc">
-                    <a href = "#">Hotwheels3</a>
-                </div>
-            </div>
-        </li>
-
-        <li>
-            <div class="Items">
-                <div class="ItemImage">
-                    <a target="_blank" href="#">
-                    <img src="~/Images/Hot_Wheels_logo.png" alt="hotwheels" runat="server"/>
-                </a>
-                </div>
-                <div class="ItemDesc">
-                    <a href = "#">Hotwheels4</a>
-                </div>
-            </div>
-        </li>
-
-        <li>
-            <div class="Items">
-                <div class="ItemImage">
-                    <a target="_blank" href="#">
-                    <img src="~/Images/Hot_Wheels_logo.png" alt="hotwheels" runat="server"/>
-                </a>
-                </div>
-                <div class="ItemDesc">
-                    <a href = "#">Hotwheels5</a>
-                </div>
-            </div>
-        </li>
-
-        <li>
-            <div class="Items">
-                <div class="ItemImage">
-                    <a target="_blank" href="#">
-                    <img src="~/Images/Hot_Wheels_logo.png" alt="hotwheels" runat="server"/>
-                </a>
-                </div>
-                <div class="ItemDesc">
-                    <a href = "#">Hotwheels6</a>
-                </div>
-            </div>
-        </li>
-
-        <li>
-            <div class="Items">
-                <div class="ItemImage">
-                    <a target="_blank" href="#">
-                    <img src="~/Images/Hot_Wheels_logo.png" alt="hotwheels" runat="server"/>
-                </a>
-                </div>
-                <div class="ItemDesc">
-                    <a href = "#">Hotwheels7</a>
-                </div>
-            </div>
-        </li>
-
-        <li>
-            <div class="Items">
-                <div class="ItemImage">
-                    <a target="_blank" href="#">
-                    <img src="~/Images/Hot_Wheels_logo.png" alt="hotwheels" runat="server"/>
-                </a>
-                </div>
-                <div class="ItemDesc">
-                    <a href = "#">Hotwheels8</a>
-                </div>
-            </div>
-        </li>
-
-        <li>
-            <div class="Items">
-                <div class="ItemImage">
-                    <a target="_blank" href="#">
-                    <img src="~/Images/Hot_Wheels_logo.png" alt="hotwheels" runat="server"/>
-                </a>
-                </div>
-                <div class="ItemDesc">
-                    <a href = "#">Hotwheels9</a>
-                </div>
-            </div>
-        </li>
-
-        <li>
-            <div class="Items">
-                <div class="ItemImage">
-                    <a target="_blank" href="#">
-                    <img src="~/Images/Hot_Wheels_logo.png" alt="hotwheels" runat="server"/>
-                </a>
-                </div>
-                <div class="ItemDesc">
-                    <a href = "#">Hotwheels10</a>
-                </div>
-            </div>
-        </li>
-
-    </ul>
+                <HeaderTemplate><table id="tblProduct"></HeaderTemplate>
+                <ItemTemplate>
+                    
+                        <div id="productDiv" >
+                        <a href="<%#Eval ("ProductID","Product.aspx?Id={0}")%>">
+                            <asp:Image ID="Image1" ImageUrl='<%# "~/ProductImage/" + Eval("ProductID") + ".png" %>' runat="server" Height="200" Width="200" onerror='this.src="Images/noimage.jpg"' />
+                            <p>
+                            <%#Eval("ProductName")%>
+                            </p>
+                            <p>
+                            Price: $<%#Eval("ProductPrice","{0:0.00}")%></p>
+                        </a>
+                        </div>
+                    
+                </ItemTemplate>
+                <FooterTemplate></table></FooterTemplate>
+            </asp:Repeater>
+                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:db_1626484_co5027_asgConnectionString4 %>" OnSelecting="SqlDataSource1_Selecting" SelectCommand="SELECT * FROM [tblProduct2]"></asp:SqlDataSource>        
         </div>
+    </form>
 </asp:Content>

@@ -7,28 +7,19 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Prototype {
+namespace Prototype.member {
     
     
     public partial class Default {
         
         /// <summary>
-        /// form1 control.
+        /// rptrProductList control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
-        
-        /// <summary>
-        /// rptrProdutList control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater rptrProdutList;
+        protected global::System.Web.UI.WebControls.Repeater rptrProductList;
         
         /// <summary>
         /// SqlDataSource1 control.

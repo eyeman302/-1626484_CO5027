@@ -1,9 +1,10 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Prototype.Site" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Member.master.cs" Inherits="Prototype.member.Member" %>
 
-<!DOCTYPE html lang="en">
+<!DOCTYPE html lang ="en">
 
 <html>
-<head runat = "server">
+<head runat="server">
+
 <title>
     <asp:ContentPlaceHolder ID ="TitleName" runat="server">
     </asp:ContentPlaceHolder>
@@ -13,10 +14,10 @@
     <meta charset="utf-8" />
     <style>
         #map {
-            height: 300px;
-            width: 80%;
-            margin-left: 10%;
-            margin-top: 20px;
+        height:300px;
+        width:80%;
+        margin-left:10%;
+        margin-top:20px;
         }
         html,body {
             height:100%;
@@ -28,9 +29,11 @@
 
 <body runat ="server">
 
+    <form id="form1" runat="server">
+
     <div class="header">
-        <img src="~/Images/Hot_Wheels_logo.png" id="Logo" alt="Logo" runat="server"/>
-        <a href="login.aspx" title="Login">Login</a> || <a href="Register.aspx" title="Sign Up">Sign Up</a>
+        <img src="~/Images/Hot_Wheels_logo.png" id="Logo" alt="Logo" runat="server"/>&nbsp;
+        <asp:Button ID="btnLogout" runat="server" OnClick="btnLogout_Click" Text="LOGOUT" />
     </div>
 
     <div class="navigation">
@@ -60,5 +63,6 @@
         <a href="http://jigsaw.w3.org/css-validator/check/referer">Validate CSS</a>
         <a href="/CO5027_1626484_asg/admin/Default.aspx">Admin</a>
     </footer>
+    </form>
 </body>
 </html>

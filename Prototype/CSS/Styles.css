@@ -1,5 +1,5 @@
-﻿body {
-    background-color: #ffffff;
+﻿html, body {
+    background-color: #6d6d6d;
     overflow-x: hidden;
     margin: 0px;
 }
@@ -16,15 +16,26 @@
     color: #0051FF;
 }
 
+.content{
+    background-color:#ffffff;
+    padding-bottom:50px;
+}
+#footer {
+    position:relative;
+    bottom: 0;
+    width: 100%;
+    background-color: #EDF9C5;
+    text-align:center;
+    height:30px;
+    margin-top:15px;
+}
+
 #Logo {
-    margin: 0px auto 0px auto;
+    margin: 0px auto;
     width: 550px;
     display: block;
     padding-top:50px;
     padding-bottom:30px;
-}
-.navigation {
-    margin-top: 0px;
 }
 
 .navigation ul {
@@ -53,10 +64,6 @@
     min-width:50%;
 }
 
-.Content {
-    max-width:80%;
-}
-
 h1 {
     text-align:center;
 }
@@ -67,76 +74,165 @@ h1 {
     background-color: #ffffff;
     margin:auto;
     display:inherit;
-    
 }
 
+#Content4 #map {
+    height: 300px;
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 20px;
+    padding-bottom:35px;
+}
 
 /* Default User Page Start*/
-.Items:hover {
-    transform: scale(1.2);
-    box-shadow: 0 0 20px 2px #FFB400, 0 6px 20px 0 #000000;
-}
 
-.ItemImage {
-    margin:auto;
-    text-align:justify;
+#tblProduct {
+    width: 100%;
 }
-.ItemImage img {
-    width: 250px;
-    text-decoration: none;
-    border: 0;
-    padding: 20px;
-    margin-left: 10px;
-    margin:auto;
-    text-align:justify;
-
-}
-
-.ItemDesc a {
-    color: #000000;
-    font-size: 20px;
-    text-align: center;
-    text-decoration: none;
-}
-.ItemDesc {
+#tblProduct td a{
     text-align:center;
 }
 
-
-.ItemGallery ul{
-    list-style-type: none;
-
+#productDiv {
+    float: left;
+    border: 1px;
+    padding:10px;
+}
+#productDiv #Image1 {
+        Height : 300px;
+        Width : 200px;
+}
+#productDiv p{
+    text-align:center;
+}
+#productDiv:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px 2px #FFB400, 0 6px 20px 0 #000000;
+    background-color: #EDF9C5;
+}
+.content3{
+    text-align:center;
 }
 
-.ItemGallery ul li {
-    display: inline;
+/*End of Default Page*/
+
+/*contact page*/
+.contactInfo{
+    text-align:center;
 }
 
-.ItemGallery img{
-    width:250px;
+.contactInfo p{
+    letter-spacing:0;
+    margin:0;
+    font-size:18px;
+    color:blue;
 }
-/* Default User Page End*/
+.contactInfo #lblEmail, #lblSubject, #lblBody {
+    color: blue;
+    font-size: 18px;
+    padding-right:50px;
+}
+.contactInfo #reqEmail, #regvalEmail, #reqSubjectField, #reqBodyField{
+    color:red;
+}
+.contactInfo #txtEmail,#txtSubject, #txtBody{
+    width:300px;
+    box-sizing: border-box;
+}
+/*End of Contact*/
+/*start login*/
+#frmLogin{
+    text-align:center;
+}
+
+#frmLogin #lblEmail,#lblPassword{
+    font-size:20px;
+    font-weight:bold;
+    padding-right:10px;
+}
+#frmLogin #txtLoginEmail,#txtLoginPassword{
+    width:300px;
+    box-sizing: border-box;
+}
+#frmLogin #btnLogin{
+    width:300px;
+    font-size:15px;
+    font-weight:bold;
+}
+/*end of login*/
 
 /*Product page start*/
+#frmProduct{
+    height:400px;
+    margin-bottom:50px;
+}
 .imgBox {
-    width: 300px;
-    height: 300px;
+    width: 200px;
+    height: 200px;
     border: 2px solid #ADADAD;
     float: left;
     padding: 10px;
     margin-right: 20px;
+    margin-left: 55px;
 }
+
 #ProductImg {
     width: 100%;
     margin: auto;
     display: block;
 }
 
-.ProductHeading h1{
-    text-align:left;
+.ProductHeading h1 {
+    text-align: left;
 }
 
-.ProductDesc p{
-    font-size:18px;
+.ProductDesc p {
+    font-size: 18px;
+}
+
+.ProductDesc #btnBuy {
+    margin-left:300px;
+    margin-top:20px;
+    width:50px;
+    font-weight:bold;
 }
 /*Product Page End*/
+/*Register Page Start*/
+#frmRegister{
+    text-align:center;
+}
+#frmRegister #lblUsername, #lblPassword{
+    font-size:18px;
+    font-weight:bold;
+    padding-right: 10px;
+}
+#frmRegister #txtRegEmail, #txtRegPassword {
+    width: 300px;
+    box-sizing: border-box;
+}
+#frmRegister #btnRegister{
+    font-size:18px;
+    font-weight:bold;
+    width:180px;
+}
+/*end register*/
+/*admin add start*/
+.adminAdd, #formView1 p{
+    text-align:center;
+}
+/*admin  add end*/
+/*admin upload image start*/
+.divUploadImg {
+    text-align:center;
+
+}
+.divUploadImg #imageFileUploadControl, #btnUpload, #btnDelete{
+    margin-top:10px;
+    font-weight:bold;
+}
+/*admin upload image end*/
+
+/*admin home start*/
+.grviewAdmin{
+  width:100%;
+}

@@ -1,23 +1,22 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Product.aspx.cs" Inherits="Prototype.Product" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/member/Member.Master" AutoEventWireup="true" CodeBehind="Product.aspx.cs" Inherits="Prototype.member.Product" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleName" runat="server">
-    Product :: Hotwheels
-</asp:Content>
+    Product :: HotWheels</asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="PageTitle" runat="server">
     Product Description
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder" runat="server">
     <div class="ProductDesc">
-    <form id="frmProduct" runat="server">
+        
 
     <div class="imgBox">
-        <asp:Image ID="CurrentImage" runat="server" Height="200px" Width="200px" onerror='this.src="Images/noimage.jpg"' />
+        <asp:Image ID="CurrentImage" runat="server" Height="200px" Width="200px" onerror='this.src="/member/Images/noimage.jpg"'/>
     </div>
     <div class="ProductHeading">
         <h1>Hotwheels</h1>
     </div>
     
         
-        <asp:FormView ID="FormView1" runat="server" DataKeyNames="ProductID" DataSourceID="SqlDataSource1">
+        <asp:FormView ID="FormView1" runat="server" DataKeyNames="ProductID" DataSourceID="SqlDataSource1" >
             <EditItemTemplate>
                 Product ID:
                 <asp:Label ID="ProductIDLabel1" runat="server" Text='<%# Eval("ProductID") %>' />
@@ -60,11 +59,9 @@
                 Product Description:
                 <asp:Label ID="ProductDescLabel" runat="server" Text='<%# Bind("ProductDesc") %>' />
                 <br />
-
-                Product Price: $
-                <asp:Label ID="ProductPriceLabel" runat="server" Text='<%# Bind("ProductPrice", "{0:0.00}") %>' />
+                Product Price:
+                <asp:Label ID="ProductPriceLabel" runat="server" Text='<%# Bind("ProductPrice","{0:0.00}") %>' />
                 <br />
-
             </ItemTemplate>
         </asp:FormView>
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:db_1626484_co5027_asgConnectionString4 %>" SelectCommand="SELECT [ProductID], [ProductName], [ProductDesc], [ProductPrice] FROM [tblProduct2] WHERE ([ProductID] = @ProductID)">
@@ -82,6 +79,7 @@
         <asp:Button ID="btnBuy" runat="server" Text="Buy" OnClick="btnBuy_Click" />
     
 
-    </form>
+
 </div>
 </asp:Content>
+
